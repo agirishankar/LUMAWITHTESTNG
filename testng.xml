@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/Shankar Agiri/eclipse-workspace/LUMA">
+        <classes>
+            <class name="COM.testluma.LumaLamdaTest">
+                <methods>
+                    <include name="login"/>
+                </methods>
+            </class>
+            <class name="COM.testluma.LumaTest">
+                <methods>
+                    <include name="login"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
