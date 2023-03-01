@@ -12,10 +12,7 @@ import java.io.IOException;
 public class Readfromjson {
 
     WebDriver driver;
-//    public Readfromjson(WebDriver driver){
-//        this.driver = driver;
-//    }
-//
+//common method  for json FileReader
     public String readFile(String attribute) throws IOException, ParseException {
         JSONParser jsonParser = new JSONParser();
         FileReader read = new FileReader(System.getProperty("user.dir")+"/TestData/ShippingAddress.json");

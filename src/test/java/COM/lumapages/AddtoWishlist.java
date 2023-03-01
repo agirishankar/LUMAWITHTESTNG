@@ -63,8 +63,8 @@ public class AddtoWishlist {
         seleniumActions.clickOnElement(ProceedtoCheckout);
 
         seleniumActions.clickOnElement(newaddress);
-//        Thread.sleep(3000);
-//        seleniumActions.clickOnElement(newaddress);
+     Thread.sleep(3000);
+       seleniumActions.clickOnElement(newaddress);
 
 
        // MyWishListproducname.click();

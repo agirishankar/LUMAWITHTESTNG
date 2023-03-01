@@ -23,6 +23,8 @@ public class LumaLoginPage {
 
     @FindBy(xpath = "//button[@id=\"send2\"]")
     WebElement singinbutton;
+
+    //for luma login
     public void loginWebelements(String email,String password){
         seleniumActions.EnterValueOnTextfield(remail,email );
         seleniumActions.EnterValueOnTextfield(rpassword,password);

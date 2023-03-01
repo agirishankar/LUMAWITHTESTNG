@@ -12,6 +12,7 @@ import java.time.Duration;
 public class BaseClass {
     public WebDriver driver;
 
+//to launch webdriver
     @BeforeSuite
     public void launchDriver() {
         WebDriverManager.chromedriver().setup();
@@ -19,11 +20,14 @@ public class BaseClass {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
+
+
     @BeforeMethod
     public void url() {
+
         driver.get("https://magento.softwaretestingboard.com/customer/account/");
     }
-     @AfterTest
+    // @AfterTest
     public void quit(){
         driver.quit();
 

@@ -24,6 +24,7 @@ public class ThankyouPage {
        // Assert.assertTrue(ordernumber.isDisplayed());
        // System.out.println(ordernumber.getText());
         seleniumActions.clickOnElement(ordernumber);
+        System.out.println("1");
 
 
 

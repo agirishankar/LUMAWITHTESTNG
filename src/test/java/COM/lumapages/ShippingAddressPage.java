@@ -2,6 +2,7 @@ package COM.lumapages;
 
 import COM.Readfromfile.Readfromjson;
 import COM.actions.SeleniumActions;
+import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 import org.bouncycastle.jcajce.provider.asymmetric.X509;
 import org.bouncycastle.pqc.crypto.newhope.NHOtherInfoGenerator;
 import org.json.simple.parser.ParseException;
@@ -66,25 +67,25 @@ WebElement country;
     @FindBy(xpath = "//span[@class='label']//following::span")
     WebElement orderdate;
 
+
     public void address() throws IOException, ParseException, InterruptedException {
-        Thread.sleep(3000);
-        seleniumActions.clickOnElement(newaddress);
+       // Thread.sleep(3000);
+       // seleniumActions.clickOnElement(newaddress);
         seleniumActions.EnterValueOnTextfield(streetaddress,readfromjson.readFile("StreetAddress"));
         seleniumActions.EnterValueOnTextfield(city,readfromjson.readFile("City"));
         Thread.sleep(2000);
         seleniumActions.selectValueFromDropDown(country,readfromjson.readFile("Country"),"value");
-        seleniumActions.selectValueFromDropDown(statprovince,readfromjson.readFile("StateProvince"),"value");
+        seleniumActions.selectValueFromDropDown(statprovince,readfromjson.readFile("StateProvince"),"value");//StateProvince
+        //System.out.println(statprovince.getText());//StateProvince);
         seleniumActions.EnterValueOnTextfield(postalcode,readfromjson.readFile("PostalCode"));
         seleniumActions.EnterValueOnTextfield(phonenumber,readfromjson.readFile("PhoneNumber"));
 
-        Thread.sleep(1000);
+       Thread.sleep(1000);
         seleniumActions.clickOnElement(shiphere);
-        Thread.sleep(5000);
+       // Thread.sleep(5000);
         seleniumActions.clickOnElement(radio);
+        //Thread.sleep(5000);
         seleniumActions.clickOnElement(nextbutton);
-
-
-
 
     }
 

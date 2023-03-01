@@ -27,7 +27,6 @@ public class ReviewAndPaymentsPage {
     WebElement addresscheckbox;
 
     public void clickOnPlacorder() throws InterruptedException {
-
         Thread.sleep(2000);
         seleniumActions.clickOnElement(addresscheckbox);
 //        System.out.println(paymentaddress.getText());
